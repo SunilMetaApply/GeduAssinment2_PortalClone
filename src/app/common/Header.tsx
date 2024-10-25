@@ -1,13 +1,14 @@
 import { Button, Container, Grid, TextField } from '@mui/material';
 import React from 'react';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
     <Container sx={{padding:'5px 0px', borderBottom:'1px solid #ccc'}} maxWidth={false}>
       <Grid container>
         <Grid item xs={5}>
-          <img src="https://portal-dev.eduapply.io/malogocomplete.svg" alt="logo" />
+            <img src="https://portal-dev.eduapply.io/malogocomplete.svg" alt="logo" />
         </Grid>
         <Grid item xs={7}>
           <Grid container>

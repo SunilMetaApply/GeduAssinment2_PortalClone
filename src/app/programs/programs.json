@@ -1,0 +1,80 @@
+{
+  "programs": [
+    {
+      "id": 1,
+      "name": "KnO",
+      "university": {
+        "name": "Amity University Dubai",
+        "campus": "Dubai Campus",
+        "country": "United Arab Emirates"
+      },
+      "logo": "https://portal-dev.eduapply.io/malogocomplete.svg",
+      "details": {
+        "course_category": "Computer Engineering",
+        "course_degree": "Master of Technology",
+        "application_fee": 41000,
+        "duration_months": 36,
+        "minimum_deposit": 4100,
+        "living_cost": 55000,
+        "program_level": "Postgraduate"
+      }
+    },
+    {
+      "id": 2,
+      "name": "kPs_21 August",
+      "university": {
+        "name": "PFH Private University of Applied Science",
+        "campus": "Göttingen Campus",
+        "country": "Germany"
+      },
+      "logo": "https://portal-dev.eduapply.io/malogocomplete.svg",
+      "details": {
+        "course_category": "Computer Engineering",
+        "course_degree": "Master of Technology",
+        "application_fee": 41000,
+        "duration_months": 24,
+        "minimum_deposit": 4300,
+        "living_cost": 55000,
+        "program_level": "Postgraduate"
+      }
+    },
+    {
+      "id": 3,
+      "name": "M.Tech Full Time",
+      "university": {
+        "name": "PFH Private University of Applied Science",
+        "campus": "Göttingen Campus",
+        "country": "Germany"
+      },
+      "logo": "https://portal-dev.eduapply.io/malogocomplete.svg",
+      "details": {
+        "course_category": "Computer Engineering",
+        "course_degree": "Bachelor of Archaeology",
+        "application_fee": 88888,
+        "duration_months": 99,
+        "minimum_deposit": 4100,
+        "living_cost": 55000,
+        "program_level": "Postgraduate"
+      }
+    },
+    {
+      "id": 4,
+      "name": "M.Tech Full Time",
+      "university": {
+        "name": "ABC Campus",
+        "campus": "Göttingen Campus",
+        "country": "Germany"
+      },
+      "logo": "https://portal-dev.eduapply.io/malogocomplete.svg",
+      "details": {
+        "course_category": "Computer Engineering",
+        "course_degree": "Bachelor of Archaeology",
+        "application_fee": 88888,
+        "duration_months": 99,
+        "minimum_deposit": 4100,
+        "living_cost": 55000,
+        "program_level": "Postgraduate"
+      }
+    }
+  ]
+}
