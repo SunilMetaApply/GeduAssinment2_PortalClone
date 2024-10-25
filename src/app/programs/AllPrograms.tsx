@@ -1,4 +1,4 @@
-import { Card, Grid } from '@mui/material';
+import { Card, Grid, Typography } from '@mui/material';
 import Link from 'next/link';
 import React from 'react';
 import programsData from './programs.json';
@@ -19,7 +19,7 @@ const AllPrograms: React.FC = () => {
           <Grid container>
             <Grid item xs={7}>
               <Link href={`/programs/${program.id}`}>
-                <h4>{program.name}</h4>
+                <Typography variant="h5">{program.name}</Typography>
               </Link>
               <p>
                 {program.university.name} ({program.university.campus}), {program.university.country}

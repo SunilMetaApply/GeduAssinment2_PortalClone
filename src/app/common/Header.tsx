@@ -2,6 +2,7 @@ import { Button, Container, Grid, TextField } from '@mui/material';
 import React from 'react';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import Link from 'next/link';
+import DropdownButton from './DropDown';
 
 const Header: React.FC = () => {
   return (
@@ -13,9 +14,7 @@ const Header: React.FC = () => {
         <Grid item xs={7}>
           <Grid container>
             <Grid item xs={2}>
-              <Button variant="outlined">
-                <AddOutlinedIcon />
-              </Button>
+              <DropdownButton/>
             </Grid>
             <Grid item xs={5}>
               <TextField fullWidth placeholder="Search" variant="outlined" size="small" />

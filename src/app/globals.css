@@ -47,6 +47,20 @@ p{
   min-width: inherit;
 }
 
+.css-mhc70k-MuiGrid-root>.MuiGrid-item{
+  padding-top: 12px;
+}
+
+label{
+  margin-bottom: 2px;
+  display: block;
+}
+
+body{
+  scrollbar-width: 5px !important;
+  padding: 0px !important;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
