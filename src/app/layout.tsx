@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./common/Header";
 import Sidebar from "./common/Sidebar";
+import {Providers} from './Redux/providers'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,11 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body> 
+      <Providers>
         <Header/>
         <div style={{display:'flex'}}>
           <Sidebar/>
             {children}
         </div>
+        </Providers>
       </body>
     </html>
   );
