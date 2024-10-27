@@ -13,40 +13,39 @@ interface BreadcrumbItem {
 const BreadCrumb: React.FC = () => {
   const pathname = usePathname();
   const [breadcrumbItems, setBreadcrumbItems] = useState<BreadcrumbItem[]>([{ text: 'Dashboard', href: '/' }]);
-
+  
   useEffect(() => {
     const paths = pathname.split('/').filter(Boolean);
-    
-    // Create new breadcrumbs from paths
-    const newBreadcrumbs = paths.map((path, index) => ({
-      text: path.charAt(0).toUpperCase() + path.slice(1),
-    //   href: '/' + paths.slice(0, index + 1).join('/'),
-      href: '/' + paths.slice(0, index + 1).join('/'),
-    }));
 
-    // Combine with the Dashboard breadcrumb and avoid duplicates
-    const combinedBreadcrumbs = [{ text: 'Dashboard', href: '/' }, ...newBreadcrumbs];
+    const newBreadcrumbs = paths.map((path, index) => {
+      const href = '/' + paths.slice(0, index + 1).join('/');
+      return {
+        text: path.charAt(0).toUpperCase() + path.slice(1),
+        href,
+      };
+    });
 
-    // Ensure no duplicate entries
-    const uniqueBreadcrumbs = Array.from(new Map(combinedBreadcrumbs.map(item => [item.href, item])).values());
-
-    setBreadcrumbItems(uniqueBreadcrumbs);
+    if (pathname === '/') {
+      setBreadcrumbItems([{ text: 'Dashboard', href: '/' }]);
+    } else {
+      const combinedBreadcrumbs = [{ text: 'Dashboard', href: '/' }, ...newBreadcrumbs];
+      const uniqueBreadcrumbs = Array.from(new Map(combinedBreadcrumbs.map(item => [item.href, item])).values());
+      setBreadcrumbItems(uniqueBreadcrumbs);
+    }
   }, [pathname]);
+
+  if (pathname === '/dashboard') {
+    return <Typography>Dashboard </Typography>;
+  }
 
   return (
     <div role="presentation">
       <Breadcrumbs aria-label="breadcrumb">
         {breadcrumbItems.map((item, index) => (
-        //   <Link key={index} underline="hover" color="inherit" href={item.href}>
-        //     {item.text}
-        //   </Link>
-          <span key={index}>
-            {item.text}
-          </span>
+          <Typography key={index}>
+              {item.text}
+          </Typography>
         ))}
-        {/* <Typography sx={{ color: 'text.primary' }}>
-          {breadcrumbItems[breadcrumbItems.length - 1]?.text}
-        </Typography> */}
       </Breadcrumbs>
     </div>
   );

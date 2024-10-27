@@ -1,4 +1,4 @@
-import { Button, Container, Grid, TextField } from '@mui/material';
+import { Box, Button, Container, Grid, TextField } from '@mui/material';
 import React from 'react';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import Link from 'next/link';
@@ -7,13 +7,13 @@ import BreadCrumb from './BreadCrumb';
 
 const Header: React.FC = () => {
   return (
-    <Container sx={{padding:'5px 0px', borderBottom:'1px solid #ccc'}} maxWidth={false}>
+    <Container className='header' sx={{padding:'5px 0px', borderBottom:'1px solid #ccc'}} maxWidth={false}>
       <Grid container>
         <Grid item xs={5}>
-            <img src="https://portal-dev.eduapply.io/malogocomplete.svg" alt="logo" />
-
-            <BreadCrumb/>
-
+          <Box style={{display:'flex', alignItems:'center', gap:'1em'}}> 
+              <img src="https://portal-dev.eduapply.io/malogocomplete.svg" alt="logo" />
+              <BreadCrumb/>
+          </Box>
         </Grid>
         <Grid item xs={7}>
           <Grid container>

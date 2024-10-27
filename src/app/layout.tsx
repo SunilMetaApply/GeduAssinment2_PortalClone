@@ -29,12 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body> 
-      <Providers>
-        <Header/>
-        <div style={{display:'flex'}}>
-          <Sidebar/>
-            {children}
-        </div>
+        <Providers>
+          <Header/>
+          <Sidebar/> 
+          <main className="main">
+              {children}
+          </main>
         </Providers>
       </body>
     </html>

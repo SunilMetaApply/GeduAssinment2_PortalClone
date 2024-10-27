@@ -66,3 +66,24 @@ body{
     color-scheme: dark;
   }
 }
+
+
+.sideBox{
+  position: fixed;
+  left: 0;
+  top:53px;
+  background: #fff;
+}
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 99;
+}
+.main{
+  padding-left: 80px;
+  padding-top: 50px;
+  width: 100%;
+}

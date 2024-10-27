@@ -56,7 +56,7 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: '93vh', borderRight: '1px solid #ccc' }}>
+    <Box className="sideBox" sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: '93vh', borderRight: '1px solid #ccc' }}>
       {switchMenu ? (
         <List sx={{ width: '80px' }}>
           {settingMenuItems.map((item, index) => (
