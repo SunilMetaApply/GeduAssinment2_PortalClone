@@ -3,6 +3,7 @@ import React from 'react';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import Link from 'next/link';
 import DropdownButton from './DropDown';
+import BreadCrumb from './BreadCrumb';
 
 const Header: React.FC = () => {
   return (
@@ -10,6 +11,9 @@ const Header: React.FC = () => {
       <Grid container>
         <Grid item xs={5}>
             <img src="https://portal-dev.eduapply.io/malogocomplete.svg" alt="logo" />
+
+            <BreadCrumb/>
+
         </Grid>
         <Grid item xs={7}>
           <Grid container>

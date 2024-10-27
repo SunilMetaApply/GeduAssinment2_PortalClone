@@ -11,6 +11,7 @@ import {countryOptions, educationLevelOptions, institutionOptions, programLevelO
 interface Option {
     title: string;
 }
+
 const Filters: React.FC = () => {
     const dispatch = useDispatch();
     const [sort, setSort] = useState<string>('Added Recently');
@@ -22,7 +23,6 @@ const Filters: React.FC = () => {
     const [programDuration, setProgramDuration] = useState<number[]>([0, 20]);
 
     const handleClearAll = () => {
-        // Reset all state variables to their initial values
         setSort('');
         setCountry(null);
         setEducationLevel(null);
@@ -30,20 +30,6 @@ const Filters: React.FC = () => {
         setProgramLevel(null);
         setProgramCategory(null);
         setProgramDuration([0, 20]);
-
-        // Reset Redux state if necessary
-        // dispatch(setSearchParams({
-        //     academicRequirements: {
-        //         country: null,
-        //         educationLevel: null,
-        //     },
-        //     programDetails: {
-        //         institution: null,
-        //         programLevel: null,
-        //         programCategory: null,
-        //         programDuration: [0, 20],
-        //     },
-        // }));
     };
 
     const handleSortChange = (event: SelectChangeEvent<string>) => {
