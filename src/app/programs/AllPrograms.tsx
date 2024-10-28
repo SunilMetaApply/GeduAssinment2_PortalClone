@@ -2,6 +2,7 @@ import { Card, Grid, Typography } from '@mui/material';
 import Link from 'next/link';
 import React from 'react';
 import programsData from './programs.json';
+import Image from 'next/image';
 
 const AllPrograms: React.FC = () => {
   return (
@@ -26,10 +27,12 @@ const AllPrograms: React.FC = () => {
               </p>
             </Grid>
             <Grid item xs={5}>
-              <img
+              <Image
                 src={program.logo}
                 style={{ marginLeft: 'auto', display: 'block' }}
                 alt="logo"
+                width={30}
+                height={30}
               />
             </Grid>
           </Grid>

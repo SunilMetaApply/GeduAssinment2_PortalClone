@@ -1,9 +1,8 @@
-import { Box, Button, Container, Grid, TextField } from '@mui/material';
+import { Box, Container, Grid, TextField } from '@mui/material';
 import React from 'react';
-import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
-import Link from 'next/link';
 import DropdownButton from './DropDown';
 import BreadCrumb from './BreadCrumb';
+import Image from 'next/image';
 
 const Header: React.FC = () => {
   return (
@@ -11,7 +10,7 @@ const Header: React.FC = () => {
       <Grid container>
         <Grid item xs={5}>
           <Box style={{display:'flex', alignItems:'center', gap:'1em'}}> 
-              <img src="https://portal-dev.eduapply.io/malogocomplete.svg" alt="logo" />
+              <Image src="https://portal-dev.eduapply.io/malogocomplete.svg" width={20} height={20} alt="logo" />
               <BreadCrumb/>
           </Box>
         </Grid>

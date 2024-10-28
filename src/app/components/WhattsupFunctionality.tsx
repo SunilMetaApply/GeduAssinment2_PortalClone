@@ -1,13 +1,11 @@
 import React from 'react';
 
-interface WhatsAppButtonInterface {
-  phoneNumber: number;
-  message?: string;
-}
 
-const WhatsAppButton: React.FC<WhatsAppButtonInterface> = ({ phoneNumber, message }) => {
-  // const formattedMessage = encodeURIComponent(message || "");
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
+const WhatsAppButton: React.FC = () => {
+  
+  const phoneNumber: number = 917428697331;
+  const message: string = "I need assistance, please help me";
+  const whatsappLink: string = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <a 
