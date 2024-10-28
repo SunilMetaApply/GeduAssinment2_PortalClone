@@ -4,6 +4,7 @@ import { Container, Grid } from '@mui/material'
 import Filters from './filters/Filters'
 import AllPrograms from './AllPrograms'
 import programs from './programs.json'
+import Support from '../common/Support'
 
 const Programme = () => {
   return (
@@ -19,6 +20,9 @@ const Programme = () => {
             </Grid>
           </Grid>
       </Container>
+
+      <Support/>
+
     </>
   )
 }

@@ -1,4 +1,14 @@
 
+export interface LoginFormValues{
+    email: string;
+    password: string;
+}
+
+export interface WhatsAppButtonProps {
+    phoneNumber: string;
+    message: string;
+  }
+
 export interface AddStudent {
     fName: string;
     lName: string;

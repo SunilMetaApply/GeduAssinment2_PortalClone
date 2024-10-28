@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'; 
 import { clearSearchParams, setSearchParams } from '../../Redux/Slices/searchSlice'; 
 
-
 interface Option {
     title: string;
 }
